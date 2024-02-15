@@ -9,14 +9,14 @@ spring:
       enabled: true
       location: C:/thymeleaf-springboot/
 
+#  server:
+#    port: 8081
+
   devtools:
     restart:
       enabled: false
     livereload:
       enabled: true
-
-  freemarker:
-    cache: false
 
   thymeleaf:
     prefix: classpath:/templates/
@@ -24,15 +24,34 @@ spring:
     cache: false
     check-template-location: true
 
-    logging:
-      level:
-        root: info
+logging:
+  level:
+    root: info
 
+# MAC용 url
+img:
+  macurl: /Users/kimminha/Desktop/JAVA/dev/07_cloudFooding(PJ)/uploadfile/Introductionimg/
 
 mybatis:
   # mapper.xml location Setting
   mapper-locations: mybatis/mapper/*.xml
   # alias Setting
-  type-aliases-package: com.ohgiraffers.semiproject
   configuration:
     map-underscore-to-camel-case: true
+
+
+
+#  mail:
+#    host: smtp.gmail.com # 1
+#    port: 587 # 2
+#    username: lees8485@gmail.com # 3
+#    password: penqoytsdahudarz  # 4
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true # 5
+#          timeout: 5000 # 6
+#          starttls:
+#            enable: true # 7
+
+

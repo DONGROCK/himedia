@@ -1,45 +1,25 @@
 package com.ohgiraffers.semiproject.order.model.dto;
 
+import lombok.*;
+
 import java.util.List;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class PaymentHistoryDTO {
 
-    private PaymentDTO paymentt;
+    private PaymentDTO payment;
 
 
     private CartDTO cart;
 
-    public PaymentHistoryDTO() {
-    }
+    private String changeName ;
 
-    public PaymentHistoryDTO(PaymentDTO paymentt, CartDTO cart) {
-        this.paymentt = paymentt;
-        this.cart = cart;
-    }
 
-    public PaymentDTO getPaymentt() {
-        return paymentt;
-    }
 
-    public void setPaymentt(PaymentDTO paymentt) {
-        this.paymentt = paymentt;
-    }
-
-    public CartDTO getCart() {
-        return cart;
-    }
-
-    public void setCart(CartDTO cart) {
-        this.cart = cart;
-    }
-
-    @Override
-    public String toString() {
-        return "PaymentHistoryDTO{" +
-                "paymentt=" + paymentt +
-                ", cart=" + cart +
-                '}';
-    }
 
 
 }
