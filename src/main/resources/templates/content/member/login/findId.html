@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block  layout:fragment="content">
+
+
+
+    <link rel="stylesheet" th:href="@{/css/login/findIdAndPwd.css}">
+
+
+
+
+    <div class="container">
+        <div class="center">
+            <div>
+
+            
+            
+                <img class="moveall" id="logo1" src="/images/01_logoimg/textLogoNone.png" alt="">
+            
+            <div class="movetext2 moveall" >
+                <span><a th:href="@{/member/login}"><img class="arrow" src="/images/minicon/backicon.jpg" alt=""></a></span>
+                <span class="gologin">아이디 찾기</span>
+            </div>
+
+            
+            <div class="joininfo">
+            <form action="/submit-form">
+            <div class="moveall">
+                    <li>Your Id</li>
+                    <li><span><input class="box1" type="text"></span></li>
+                </div>
+
+                <div class="moveall">
+                    <li class="movebox">Your Email</li>
+                    <span><input type="text" class="box2"></span>&nbsp;&nbsp;<span class="mailbtn"><button type="submit" >인증번호 받기</button></span>
+                    <li class="movebox">Authentication Code</li>
+                    <span><input type="text" class="box1"></span>
+                </div>
+
+                <div class="downpart">
+                    <ul class="findid">
+                        <li><a th:href="@{/member/findPwd}">비밀번호 찾기</a></li>
+                        <li><a th:href="@{/member/join}">회원가입</a></li>
+                    </ul>
+                </div>
+
+
+
+                
+            
+        
+            <div  class="joinbtn" ><a th:href="@{/member/login}"><button type="submit">다음</button></a></div>
+        </form>
+
+
+    </div>
+    
+    
+    
+        
+    <div class="down">
+        <span>Help Center</span>
+        <span>Terms of Service</span>
+        <span>Privacy Policy</span>
+        <span>@2022Yanliudesign</span>
+        </div>
+    </div>
+    </div>
+    
+    </div>
+
+
+
+
+
+</th:block>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<th:block  layout:fragment="content">
+    <title>login</title>
+
+    <link rel="stylesheet" th:href="@{/css/login/login.css}" type="text/css">
+
+
+
+
+
+
+    <div id="wrap">
+    <div id="login">
+    <ul class="signin">
+        <a th:href="@{/#}"><img id="logo1" src="/resources/images/textlogonone_2.png" alt=""></a>
+        <li class="signin_text">Sign in</li>
+        <li class="user_id">
+            
+            <label class="movetext1" >your id</label> <br>
+            <input type="text">
+        </li>
+        <li>
+            <label class="movetext2" >your password</label>
+            <br>
+            <input type="password"> 
+            <img src="#" alt="">
+            
+        </li>
+        <li class="btlogin">
+            <button>Log in</button>
+        </li>
+        <li>By continuing, you agree to the Terms of use and Privacy Policy.</li>
+    </ul>
+
+
+    <div class="downpart">
+    <ul class="findid">
+        <li><a th:href="@{/member/findId}">아이디 찾기</a></li>
+        <li><a th:href="@{/member/findPwd}">비밀번호 찾기</a></li>
+    </ul>
+    
+    
+        <li>New to our community</li>
+        <li class="btjoin"><a th:href="@{/member/join}" target="_blank"><button>회원가입</button></a></li>
+    </div>
+
+    <div class="down">
+        <span>Help Center</span>
+        <span>Terms of Service</span>
+        <span>Privacy Policy</span>
+        <span>@2022Yanliudesign</span>
+        </div>
+    
+
+</div>
+    
+</div>
+
+
+
+</th:block>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<th:block th:fragment="sidebar">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/sideBar.js"></script>
+    <link rel="stylesheet" href="/css/sideBar/css.css">
+
+    <div class="left">
+        <div class="sideBar">
+
+            <!-- 사이드바 메뉴 -->
+            <div class="sideBar-menu">
+                <strong><div class="title">마이페이지</div></strong>
+
+                <div id="navSide">
+                    <ul class="sideBar-toggle">
+                        <li><a th:href="@{#}">내정보관리</a><br>
+                            <ul class="sub">
+                                <li><a th:href="@{/member/changeInfo}">개인정보 변경</a>
+                                <li><a th:href="@{/member/userWithdrawal}">회원탈퇴 </a>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="sideBar-toggle">
+                        <li><a href="#">장바구니</a>
+                            <ul class="sub">
+                                <li><a th:href="@{/order/watchlist}">나의 펀딩 리스트</a>
+                                <li><a th:href="@{/order/cart}">관심 펀딩 리스트</a>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li><a th:href="@{/QnA/usermain}">프로젝트 QnA</a></li>
+                    <li><a th:href="@{/deliver/usermain}">배송현황</a></li>
+                    <li><a th:href="@{/board/userNotice}">공지사항</a></li>
+                    <li><a th:href="@{/support/usermain}">고객센터</a></li>
+
+
+
+                </div>
+                <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $("#navSide ul.sub").hide();
+                        $("#navSide ul.sideBar-toggle li").click(function () {
+                            $("ul", this).slideToggle("normal");
+                        });
+                    });
+                </script>
+
+                <div class="sideBar-adver">
+                    <div class="sideBar-adver-back"></div>
+                    <span class="sideBar-adver-text">요금제를 업그레이드하고
+				더 많은 광고기회를 얻으세요</span>
+                    <div class="sideBar-adver-button">
+                        <div class="sideBar-adver-button-back"></div>
+                        <span class="sideBar-adver-button-text">지금 업그레이드!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</th:block>
+</html>
